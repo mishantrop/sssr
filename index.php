@@ -14,7 +14,6 @@ function get_markup($component, $prop) {
 }
 
 $component = 'App';
-$prop = ['count' => 3];
 $markup = get_markup($component, $prop);
 ?>
 
@@ -24,16 +23,14 @@ $markup = get_markup($component, $prop);
     <title>React page</title>
   </head>
   <body>
-    <div id="app">
-      <?php echo $markup;?>
-    </div>
+    <div id="app"><?php echo $markup;?></div>
     <script src="front/dist/bundle.js"></script>
 
     <script>
         document.onreadystatechange = function () {
           if (document.readyState == 'complete') {
             ReactDom.render(
-              React.createElement(App, {count: 3}),
+              React.createElement(App, {}),
               document.getElementById('app')
             );
           }

@@ -12,8 +12,9 @@
     "clean": "rm -rf tmp"
   },
   "dependencies": {
-    "react": "0.14.5",
-    "react-dom": "0.14.5"
+    "prop-types": "15.5.10",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.38",
