@@ -25,7 +25,7 @@ if ($isServerRenderingEnabled) {
 <!DOCTYPE html>
 <html>
   <head>
-    <title>React page</title>
+    <title>SSSR Simple</title>
   </head>
   <body>
     <div id="app"><?php echo $markup;?></div>

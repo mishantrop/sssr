@@ -1,2 +1,0 @@
-export const CLIENT_FAIL = '@CLIENT/FAIL'
-export const CLIENT_SUCCESS = '@CLIENT/SUCCESS'
