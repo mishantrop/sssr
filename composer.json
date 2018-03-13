@@ -1,0 +1,7 @@
+{
+  "name": "react-php-example",
+  "description": "react php example",
+  "require": {
+    "reactjs/react-php-v8js": "2.0.0"
+  }
+}
