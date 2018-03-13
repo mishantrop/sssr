@@ -18,9 +18,9 @@ if ($isServerRenderingEnabled) {
     $component = 'App';
     $prop = [];
     $markup = get_markup($component, $prop);
+} else {
+    $markup = '';
 }
-
-$markup = '';
 ?>
 
 <!DOCTYPE html>
