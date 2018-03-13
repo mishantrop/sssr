@@ -13,7 +13,7 @@ function get_markup($component, $prop) {
   return ob_get_clean();
 }
 
-$component = 'Counter';
+$component = 'App';
 $prop = ['count' => 3];
 $markup = get_markup($component, $prop);
 ?>
@@ -33,7 +33,7 @@ $markup = get_markup($component, $prop);
         document.onreadystatechange = function () {
           if (document.readyState == 'complete') {
             ReactDom.render(
-              React.createElement(Counter, {count: 3}),
+              React.createElement(App, {count: 3}),
               document.getElementById('app')
             );
           }

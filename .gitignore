@@ -1,4 +1,5 @@
 front/node_modules
 front/package-lock.json
+front/yarn-error.log
 front/yarn.lock
 vendor
