@@ -12,15 +12,21 @@
     "clean": "rm -rf tmp"
   },
   "dependencies": {
+    "axios": "0.17.1",
+    "console": "^0.7.0",
     "prop-types": "15.5.10",
     "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "react-dom": "16.2.0",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.38",
     "@babel/core": "7.0.0-beta.38",
     "@babel/node": "7.0.0-beta.38",
     "@babel/plugin-transform-runtime": "7.0.0-beta.38",
+    "@babel/polyfill": "7.0.0-beta.38",
     "@babel/preset-env": "7.0.0-beta.38",
     "@babel/preset-react": "7.0.0-beta.38",
     "@babel/preset-stage-0": "7.0.0-beta.38",
