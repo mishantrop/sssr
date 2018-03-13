@@ -1,5 +1,6 @@
 'use strict';
 
+// require('babel-polyfill');
 import React from 'react';
 import ReactDom from 'react-dom';
 import ReactDomServer from 'react-dom/server';
