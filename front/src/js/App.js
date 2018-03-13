@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import console from 'console';
 import configureStore from './store/configureStore';
 import Counter from './Counter';
 import HeaderClient from './HeaderClient';
