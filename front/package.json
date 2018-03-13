@@ -1,19 +1,20 @@
 {
   "name": "sssr",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run babel && npm run browserify && yarn clean",
-    "uglify": "$(npm bin)/uglifyjs tmp/App.js -o dist/App.min.js && $(npm bin)/uglifyjs tmp/bundle.js -o dist/bundle.min.js",
-    "prebrowserify": "test -d src/js || mkdir -p src/js",
-    "browserify": "$(npm bin)/browserify tmp/App.js -o dist/App.js && $(npm bin)/browserify tmp/bundle.js -o dist/bundle.js",
-    "prebabel": "test -d tmp || mkdir -p tmp",
     "babel": "$(npm bin)/babel -d tmp src/js",
-    "clean": "rm -rf tmp"
+    "browserify": "$(npm bin)/browserify tmp/App.js -o dist/App.js && $(npm bin)/browserify tmp/bundle.js -o dist/bundle.js",
+    "build": "npm run babel && npm run browserify && yarn clean",
+    "clean": "rm -rf tmp",
+    "prebabel": "test -d tmp || mkdir -p tmp",
+    "prebrowserify": "test -d src/js || mkdir -p src/js",
+    "start": "webpack --watch",
+    "uglify": "$(npm bin)/uglifyjs tmp/App.js -o dist/App.min.js && $(npm bin)/uglifyjs tmp/bundle.js -o dist/bundle.min.js"
   },
   "dependencies": {
     "axios": "0.17.1",
-    "console": "^0.7.0",
+    "console": "0.7.0",
     "prop-types": "15.5.10",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "babel-core": "6.26.0",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "8.2.1",
     "babel-loader": "7.1.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-es2015": "6.24.1",

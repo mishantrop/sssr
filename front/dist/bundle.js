@@ -884,12 +884,23 @@ var clientFailed = exports.clientFailed = function clientFailed(data) {
 
 var fetchClient = exports.fetchClient = function fetchClient() {
   _console2.default.log('fetchClient');
-  if (Math.random() > 0.5 || 1 === 1) {
-    dispatch(clientSuccess(data));
-  } else {
-    dispatch(clientFailed(data));
-  }
-  return result.data;
+
+  // return (dispatch) => {
+  //   if (Math.random() > 0.5 || 1 === 1) {
+  //     dispatch(clientSuccess(data));
+  //   } else {
+  //     dispatch(clientFailed(data));
+  //   }
+  // }
+
+  var client = {
+    name: 'Vasya'
+  };
+
+  return {
+    type: _types.CLIENT_SUCCESS,
+    data: client
+  };
 };
 
 exports.default = {
@@ -2511,9 +2522,13 @@ var _redux = __webpack_require__(7);
 
 var _client = __webpack_require__(15);
 
+var clientActions = _interopRequireWildcard(_client);
+
 var _console = __webpack_require__(8);
 
 var _console2 = _interopRequireDefault(_console);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2574,7 +2589,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    actions: (0, _redux.bindActionCreators)(_client.fetchClient, dispatch)
+    actions: (0, _redux.bindActionCreators)(clientActions, dispatch)
   };
 };
 

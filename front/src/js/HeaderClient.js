@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import store from './store';
 import { bindActionCreators } from 'redux';
-import { fetchClient } from './store/actions/client';
+import * as clientActions from './store/actions/client';
 import console from 'console';
 
 class HeaderClient extends React.Component {
@@ -42,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    actions: bindActionCreators(fetchClient, dispatch),
+    actions: bindActionCreators(clientActions, dispatch),
   };
 };
 

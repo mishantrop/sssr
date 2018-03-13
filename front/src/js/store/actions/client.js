@@ -22,7 +22,7 @@ export const clientSuccess = data => dispatch => {
  * Может вызваться, когда клиент обновляет страницу кабинета, но авторизация уже всё.
  */
 export const clientFailed = (data) => dispatch => {
-  const client = null
+  const client = null;
 
   return dispatch({
     type: CLIENT_FAIL,
@@ -32,12 +32,23 @@ export const clientFailed = (data) => dispatch => {
 
 export const fetchClient = () => {
   console.log('fetchClient');
-  if (Math.random() > 0.5 || 1 === 1) {
-    dispatch(clientSuccess(data));
-  } else {
-    dispatch(clientFailed(data));
-  }
-  return result.data;
+
+  // return (dispatch) => {
+  //   if (Math.random() > 0.5 || 1 === 1) {
+  //     dispatch(clientSuccess(data));
+  //   } else {
+  //     dispatch(clientFailed(data));
+  //   }
+  // }
+
+  const client = {
+    name: 'Vasya',
+  };
+
+  return {
+		type: CLIENT_SUCCESS,
+		data: client,
+	};
 }
 
 export default {
