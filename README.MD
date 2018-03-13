@@ -1,5 +1,6 @@
 # Super Server Side Rendering
 Simple demo for server side rendering of React 16 components with PHP.
+Redux is used.
 ## Hot to run
 In project root directory:
 
