@@ -1,10 +1,11 @@
 <?php
-$isServerRenderingEnabled = false;
+$isServerRenderingEnabled = true;
+$markup = '';
 if ($isServerRenderingEnabled) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-    function get_markup($component, $prop) {
-      $default_prop = json_encode($prop);
+    function getMarkup($component, $props) {
+      $default_prop = json_encode($props);
       $v8 = new V8Js();
       $js[] = "var global = global || this, self = self || this, window = window || this;";
       $js[] = file_get_contents('./front/dist/bundle.js', true);
@@ -16,11 +17,9 @@ if ($isServerRenderingEnabled) {
     }
 
     $component = 'App';
-    $prop = [];
-    $markup = get_markup($component, $prop);
+    $props = [];
+    $markup = getMarkup($component, $props);
 }
-
-$markup = '';
 ?>
 
 <!DOCTYPE html>

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import store from './store';
 import { bindActionCreators } from 'redux';
 import * as clientActions from './store/actions/client';
-import console from 'console';
 
 class HeaderClient extends React.Component {
   static propTypes = {
@@ -17,14 +16,8 @@ class HeaderClient extends React.Component {
     client: null,
   };
 
-  componentDidMount() {
-    // store.dispatch(fetchClient());
-  }
-
   render() {
     const { client } = this.props;
-
-    console.log(client);
 
     return client !== null && (
       <div className="header-client">

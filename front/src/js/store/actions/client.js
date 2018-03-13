@@ -1,7 +1,5 @@
 // import axios from 'axios'
 // import qs from 'qs'
-// import { store } from '../index'
-import console from 'console';
 import {
   CLIENT_FAIL,
   CLIENT_SUCCESS,
@@ -31,8 +29,6 @@ export const clientFailed = (data) => dispatch => {
 }
 
 export const fetchClient = () => {
-  console.log('fetchClient');
-
   // return (dispatch) => {
   //   if (Math.random() > 0.5 || 1 === 1) {
   //     dispatch(clientSuccess(data));
