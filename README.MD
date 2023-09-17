@@ -8,6 +8,7 @@ In project root directory:
 In front directory:
 
 ```$ yarn```
+
 ```$ yarn start```
 
 Then run PHP-server from root directory of project:
