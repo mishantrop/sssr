@@ -1,6 +1,6 @@
 # Super Server Side Rendering
 Simple demo for server side rendering of React 16 components with PHP.
-## Hot to run
+## How to run
 In project root directory:
 
 ```$ composer install```
